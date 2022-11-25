@@ -1,11 +1,21 @@
-import React from 'react';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import POKEMONS from './models/mock-pokemon';
+import Pokemon from './models/pokemon';
+
 
 function App() {
-  const name: String = "react mendy"
+  const [pokemons] = useState<Pokemon[]>(POKEMONS);
   return (
     <div className="App">
-      <h1>{name}</h1>
+      <h1 className="center">Pokédex</h1>
+      <div className="container">
+        <div className="row">
+        {pokemons.map(pokemon => (
+          <p>{pokemon.name}</p>
+        ))}
+        </div>
+      </div>
     </div>
   );
 }
