@@ -16,7 +16,7 @@ const PokemonList = () => {
       <div className="container">
         <div className="row">
         {pokemons.map(pokemon => (
-          <PokemonCard key={pokemon.id} pokemon={pokemon} borderColor={"green"}/>
+          <PokemonCard key={pokemon.id} pokemon={pokemon}/>
         ))}
         </div>
       </div>
